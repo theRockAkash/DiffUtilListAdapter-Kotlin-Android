@@ -11,10 +11,10 @@ import com.zapp.app.databinding.NoDataCardBinding
 class NoDataAdapter : ListAdapter<String, NoDataAdapter.ViewHolder>(DiffCallback()) {
     class DiffCallback : DiffUtil.ItemCallback<String>() {
         override fun areItemsTheSame(
-            oldItem: String,
+            oldItem: String,  
             newItem: String
         ): Boolean {
-            return oldItem == newItem
+            return oldItem == newItem  //oldItem.id == newItem.id   in case of object
         }
 
         override fun areContentsTheSame(
